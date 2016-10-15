@@ -7,9 +7,12 @@ Node.js实战源代码
 ```
 node index.js
 ```
+
 - 在新的命令行窗口中进行链接到指定hostname和port；
+  + ctrl + ] 进行交互；
 ```
 telnet 127.0.0.1 8888
 ```
-  - ctrl + ] 进行交互；
+
+  
 - 在浏览器中访问`http://localhost:8888`;
