@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>chat</title>
+    <link href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="/stylesheets/style.css" />-->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta charset="utf-8">
+</head>
+<body>
+<div class="chat-container container-fluid">
+    <div class="chat-row row">
+        <div class="chat-aside col-sm-2">
+            <h1 class="chat-header">&#9924; CLASS</h1>
+            <nav class="nav-navigatoin">
+                <h2 class="nav-header">NAVIGATION</h2>
+                <ul>
+                    <li class="nav-item">&#9783; TIMETABLE</li>
+                    <li class="nav-item">&#9786; CHAT</li>
+                    <li class="nav-item">&#9883; EXAMS</li>
+                    <li class="nav-item">&#9733; DOCUMENTS</li>
+                </ul>
+            </nav>
+
+            <!--当前可用的聊天室列表-->
+            <div class = "roomlist">
+                <h2 class="nav-header">ROOM LIST</h2>
+                <div id="room-list" class="roomlist-avail">
+                    <div>&#9969; White House</div>
+                    <div>&#9969; Buckingham</div>
+                    <div>&#9969; 10 Downing</div>
+                    <div>&#9969; Blue House</div>
+                    <div>&#9969; Scotland</div>
+                    <div>&#9969; Royal Palace</div>
+                    <div>&#9969; Forbidden City</div>
+
+                </div>
+            </div>
+            <!--<div id="chat-help" class = "chat-help">-->
+                <!--<h2 class="nav-header">Chat commands:</h2>-->
+                <!--<ul>-->
+                    <!--<li class="nav-header">Change nicnaem: <code>/nick [username]</code></li>-->
+                    <!--<li class="nav-header"></li>-->
+                    <!--<li class="nav-header">Join/create room: </li>-->
+                    <!--<li class="nav-header">join [room name]</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+        </div>
+        <div class="chatroom col-sm-7">
+            <!--当前聊天室名称-->
+            <div id="room" class="chatroom-name">
+                <span>lobby room</span>
+            </div>
+            <!--显示聊天消息-->
+            <div id="message" class = "chatroom-message">
+                <div class="chatroom-message-hint">
+                    qinghe joined
+                </div>
+                <div class="chatroom-message-hint">
+                    joined lobby room
+                </div>
+                <div class="chatroom-message-self">
+                    <img src="images/guest2.jpg" alt="" class="chatroom-message-icon">
+                    <span class="chatroom-message-text">
+                        hello world
+                    </span>
+
+                </div>
+                <div class="chatroom-message-friend">
+                    <img src="images/guest.jpg" alt="" class="chatroom-message-icon">
+                   <span class="chatroom-message-text">
+                        hello qinghe
+                    </span>
+                </div>
+                <div class="chatroom-message-self">
+                    <img src="images/guest2.jpg" alt="" class="chatroom-message-icon">
+                    <span class="chatroom-message-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, fuga?
+                    </span>
+                </div>
+                <div class="chatroom-message-friend">
+                    <img src="images/guest.jpg" alt="" class="chatroom-message-icon">
+                   <span class="chatroom-message-text">
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto cum illum, quasi quod unde.
+                    </span>
+                </div>
+                <div class="chatroom-message-self">
+                    <img src="images/guest2.jpg" alt="" class="chatroom-message-icon">
+                    <span class="chatroom-message-text">
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque eius quasi sed! Consectetur, dignissimos ducimus maxime quas quos sunt.
+                    </span>
+                </div>
+                <div class="chatroom-message-friend">
+                    <img src="images/guest.jpg" alt="" class="chatroom-message-icon">
+                   <span class="chatroom-message-text">
+                    Lorem ipsum dolor sit amet.
+                   </span>
+                </div>
+            </div>
+            <!--输入聊天命令和消息的表单-->
+            <div class="chatroom-use">
+                <img src="images/guest2.jpg" alt="" class ="chatroom-icon">
+                <form action="" id = "send-form" class = "chatroom-form">
+                    <input type="text" id="send-message" placeholder="Type your message..." class ="chatroom-input">
+                    <input type="submit" value="Send" id="send-button" class="chatroom-send">
+                </form>
+            </div>
+
+        </div>
+        <div class="chat-guest col-sm-3">
+            <div class="guest-card">
+                <img src="images/guest.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">Bob Dylan</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest2.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">Lube</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest3.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">Bill Evans</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest4.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">Damien Rice</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest5.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">B.B.king</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest4.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">The Beatles</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest2.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">Bob Dylan</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">Leonard Cohen</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest3.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">Julie Londan</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+            <div class="guest-card">
+                <img src="images/guest5.jpg" alt="" class = guest-card-icon>
+                <h3 class = "guest-card-name">Miles Davis</h3>
+                <p class="guest-card-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur hic magnam sed velit voluptas.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <!--<script src="http://cdn.bootcss.com/socket.io/1.5.1/socket.io.js"></script>-->
+    <script src = "javascripts/jquery-1.12.4.min.js" type = "text/javascript"></script>
+    <!--<script src="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>-->
+    <!--<script src = "javascripts/chat.js" type = "text/javascript"></script>-->
+    <!--<script src = "javascripts/chat_ui.js" type = "text/javascript"></script>-->
+</body>
+</html>
