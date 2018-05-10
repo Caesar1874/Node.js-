@@ -1,0 +1,11 @@
+<h1>豆瓣电影： <%= keyword %></h1>
+<% var subjects = results.subjects %>
+<% if(subjects.length) { %>
+    <ul>
+        <% for( var i = 0; i < subjects.length; i++) { %>
+            <li> <%= subjects[i].title %> - <em> <%= subjects[i].year %> </li>
+            <% } %>
+    </ul>
+<% } else { %>
+    <p>No results</p>
+<% } %>

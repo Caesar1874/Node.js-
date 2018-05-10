@@ -1,0 +1,8 @@
+
+#chat {
+    display: none;
+}
+
+.confirmed {
+    border: 1px solid green;
+}
