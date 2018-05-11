@@ -1,9 +1,9 @@
 
-var express = require("express");
-// var request = require("superagent");
+const express = require("express");
+// const request = require("superagent");
 
-var search = require("./search");
-var app = express();
+const search = require("./search");
+const app = express();
 
 //
 app.set("view engine", "ejs");
@@ -15,7 +15,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/search", function(req, res, next) {
-    var keyword = req.query["keyword"];
+    const keyword = req.query["keyword"];
     search(keyword, function(err, results) {
         if(err) {
             return next(err);

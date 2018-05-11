@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>websocket echo</title>
+
+    <script>
+        const sel = document.querySelector.bind(document)
+        let lastMessage
+
+        const main = function () {
+            const url = 'ws://localhost:30000'
+            const ws = new WebSocket(url)
+
+            function ping () {
+                // 时间戳
+                lastMessage = +new Date()
+
+                ws.send('ping')
+            }
+
+            // 建立连接后发送消息
+            ws.onopen = function () {
+                // send fist ping
+                ping()
+            }
+
+            // 收到响应后
+            ws.onmessage = function (ev) {
+                log('got', ev.data)
+                sel('#latency').innerHTML = new Date - lastMessage
+                ping()
+            }
+
+        }
+        window.onload = function () {
+            main()
+        }
+    </script>
+</head>
+<body>
+<h1>websocket echo</h1>
+<h2>Latency: <span id="latency"></span></h2>
+</body>
+</html>
