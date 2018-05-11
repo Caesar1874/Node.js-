@@ -1,0 +1,15 @@
+extends layout
+block body
+    form(action='/signup', method='POST')
+        fieldset
+            legend sign up
+            p
+                label first
+                input(name='user[email]', type='text')
+            p
+                label first
+                input(name='user[password]', type='text')
+            p
+               button submit
+            p
+                a(href='/') go back
